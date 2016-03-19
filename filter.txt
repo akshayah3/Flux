@@ -1,0 +1,4 @@
+The magnitude for ultraviolet filter is 3.55138091013
+The magnitude for Blue filter is 4.14859268486
+The magnitude for Violet filter is 4.41699662378
+The magnitude for Red filter is 3.99094659424
