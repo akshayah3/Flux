@@ -7,6 +7,7 @@ from scipy import integrate
 from numpy import trapz
 temperature = 10000.0 * u.K
 from math import log10
+from math import ceil
 
 R = const.R_sun / 2.0
 r = 10.0 * const.pc
@@ -39,7 +40,7 @@ flux_earth = 1.81e-9 * (u.W / u.meter ** 2)
 flux = flux_filter(central_wavelength.value, bandwidth.value, temperature)
 magnitude = magnitude(flux, flux_earth)
 
-print "The magnitude for ultraviolet filter is %s" %magnitude
+print "The magnitude for ultraviolet filter is %s" %round(magnitude, 2)
 
 #Blue filter
 
@@ -50,7 +51,7 @@ flux_earth = 4.26e-9 * (u.W / u.meter ** 2)
 flux = flux_filter(central_wavelength.value, bandwidth.value, temperature)
 magnitude = magnitude(flux, flux_earth)
 
-print "The magnitude for Blue filter is %s" %magnitude
+print "The magnitude for Blue filter is %s" %round(magnitude, 2)
 
 #Violet filter
 
@@ -61,7 +62,7 @@ flux_earth = 3.64e-9 * (u.W / u.meter ** 2)
 flux = flux_filter(central_wavelength.value, bandwidth.value, temperature)
 magnitude = magnitude(flux, flux_earth)
 
-print "The magnitude for Violet filter is %s" %magnitude
+print "The magnitude for Violet filter is %s" %round(magnitude, 2)
 
 #Red filter
 
@@ -72,4 +73,4 @@ flux_earth = 3.08e-9 * (u.W / u.meter ** 2)
 flux = flux_filter(central_wavelength.value, bandwidth.value, temperature)
 magnitude = magnitude(flux, flux_earth)
 
-print "The magnitude for Red filter is %s" %magnitude
+print "The magnitude for Red filter is %s" %round(magnitude, 2)
